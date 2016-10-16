@@ -5,7 +5,7 @@ element.innerHTML = 'New Value';
 
 //Move image
 var img = document.getElementById('mihir');
-var marginLeft - 0;
+var marginLeft = 0;
 function moveRight(){
     marginLeft = marginLeft + 0;
     img.style.marginLeft = marginLeft + 'px';
