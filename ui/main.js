@@ -7,7 +7,7 @@ element.innerHTML = 'New Value';
 var img = document.getElementById('mihir');
 var marginLeft = 0;
 function moveRight(){
-    marginLeft = marginLeft + 0;
+    marginLeft = marginLeft + 1;
     img.style.marginLeft = marginLeft + 'px';
 }
 
