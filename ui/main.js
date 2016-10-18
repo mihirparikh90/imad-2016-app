@@ -28,5 +28,5 @@ button.onclick = function () {
     };
     
     request.open('GET','http://mihirparikh90.imad.hasura-app.io/counter',true);
-    request.send();
+    request.send(null);
 };
