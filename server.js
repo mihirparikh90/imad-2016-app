@@ -8,7 +8,7 @@ var config = {
     database : 'mihirparikh90',
     host : 'db.imad.hasura-app.io',
     port : '5432',
-    password : 'db-mihirparikh90-74266'
+    password : process.env.DB_PASSWORD
 };
 
 var pool = new Pool(config);
@@ -105,9 +105,8 @@ app.get('/submit-name', function (req,res){
 });
 
 app.get('/article/:articleName',function (req,res){
-    var articleName = req.params.articleName;
     
-    pool.query("SELECT * FROM artice WHERE title = " + articleName, function (err,result){
+    pool.query("SELECT * FROM artice WHERE title = " + req.params.articleName + "'", function (err,result){
         if(err){
             res.status(500).send(err.toString());
         } else {
